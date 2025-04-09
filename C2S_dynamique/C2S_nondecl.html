@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demander le RSA - Santé</title>
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/roboto_cnaf.css">
+  <link rel="stylesheet" href="css/av.css">
+
+  <style>
+
+    .titre-page-cnaf { text-transform: uppercase; color: #0093c4; margin-bottom: 30px; }
+    .form-section {  padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+    #divRegimeAssMaladie { display: none; margin-top: 10px;  padding: 10px; border-radius: 6px; }
+        .etape-indicateur-cnaf { display: block; font-size: 18px; }
+    .etape-nom-cnaf { display: block; margin-top: 5px; font-size: 14px;text-transform:uppercase }
+    #adresseSection { display: none; margin-top: 15px; }
+    #organismeSection { display: none; }
+    .titreNom {color:#0093c4;text-transform:uppercase}
+.formCnaf {background-color :#fff ;padding: 20px;width :50%}
+.bodyCnaf {background-color : #f2f4f5}
+    .fieldsetCnaf {  border: none;}
+  </style>
+</head>
+<body class="bodyCnaf">
+<div class="container">
+  <h1 class="titre-page-cnaf">Demander le  RSA - Santé</h1>
+
+
+
+  <form class="formCnaf ">
+
+    <ol class="barre-etape-cnaf">
+      <li class="inactive">
+        <span class="etape-indicateur-cnaf">1</span>
+        <span class="etape-nom-cnaf">Accès</span>
+      </li>
+      <li class="active">
+        <span class="etape-indicateur-cnaf">2</span>
+        <span class="etape-nom-cnaf">Saisie</span>
+      </li>
+      <li class="inactive">
+        <span class="etape-indicateur-cnaf">3</span>
+        <span class="etape-nom-cnaf">Récapitulatif</span>
+      </li>
+      <li class="inactive">
+        <span class="etape-indicateur-cnaf">4</span>
+        <span class="etape-nom-cnaf">Fin</span>
+      </li>
+    </ol>
+    <br><br>
+    <p class="texte-medium">Tous les champs sont obligatoires, sauf mention contraire.</p>
+
+    <h2 class="titreNom">Anna Wender</h2>
+    <h3 class="titre-bloc-cnaf">
+      Assurance Maladie
+    </h3>
+    <div class="form-section">
+
+
+      <style>
+        .form-navigation button {
+          padding: 12px 24px;
+          font-size: 16px;
+          border-radius: 25px;
+          border: none;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-default.btn-retour {
+          background-color: #e4e9f1;
+          color: #2a3f5f;
+          border: 1px solid #c0c9d6;
+        }
+        .btn-default.btn-retour:hover {
+          background-color: #d1d9e4;
+          transform: translateY(-1px);
+        }
+        .btn-primary-cnaf {
+          background-color: #0076c0;
+          color: #fff;
+          font-weight: bold;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary-cnaf:hover {
+          background-color: #005fa3;
+          transform: translateY(-1px);
+        }
+
+        /* Style boutons Oui/Non et autres choix */
+        .btn-group input[type="radio"] {
+          display: none;
+        }
+        .btn-group label.btn {
+          border-radius: 4px;
+          padding: 8px 24px;
+          font-weight: 500;
+          margin-right: 8px;
+          border: 1px solid #c0c9d6;
+          background-color: #ffffff;
+          color: #333;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          cursor: pointer;
+          display: inline-block;
+          text-align: center;
+          min-width: 100px;
+        }
+        .btn-group input[type="radio"]:checked + label,
+        .btn-group label.active {
+          background-color: #0091d4;
+          color: #fff;
+          border-color: #0076c0;
+        }
+        .btn-group label.btn:hover {
+          background-color: #e4e9f1;
+          transform: translateY(-1px);
+        }
+      </style>
+
+      <fieldset>
+
+        <legend class="label-form-cnaf fieldsetCnaf">Anna Wender dépend-elle du même régime d’assurance maladie que vous ?</legend>
+        <div class="btn-group" role="group">
+          <input type="radio" id="radioOui" name="regimeAssMaladie" value="oui">
+          <label class="btn" for="radioOui">Oui</label>
+          <input type="radio" id="radioNon" name="regimeAssMaladie" value="non">
+          <label class="btn" for="radioNon">Non</label>
+        </div>
+        <div id="divRegimeAssMaladie">
+          <label class="label-form-cnaf" for="selectRegime">Régime d'assurance maladie</label>
+          <select id="selectRegime" class="form-control" style="max-width: 300px;">
+            <option value="">-- Sélectionnez un régime --</option>
+            <option value="01">Régime général (CPAM)</option>
+            <option value="02">Régime général DOM-COM (CGSS)</option>
+            <option value="03">Régime agricole (MSA)</option>
+            <option value="04">Régime des indépendants (RSI)</option>
+          </select>
+        </div>
+      </fieldset>
+    </div>
+    <h3 class="titre-bloc-cnaf">Organisme complémentaire - Santé solidaire</h3>
+
+    <div class="form-section">
+      <fieldset>
+        <legend class="label-form-cnaf fieldsetCnaf">Anna Wender souhaite-t-elle le même organisme que vous ?</legend>
+
+
+        <div class="btn-group" role="group">
+
+
+
+
+          <input type="radio" id="organismeComplementaireEgalOui" name="organismeComplementaireEgal" value="oui">
+          <label class="btn" for="organismeComplementaireEgalOui">Oui</label>
+
+          <input type="radio" id="organismeComplementaireEgalNon" name="organismeComplementaireEgal" value="non">
+          <label class="btn" for="organismeComplementaireEgalNon">Non</label>
+        </div>
+
+        <div id="organismeSection">
+          <legend class="label-form-cnaf fieldsetCnaf">Choisissez un organisme pour la gestion complémentaire Santé Solidaire :
+            <a href="https://www.complementaire-sante-solidaire.gouv.fr" target="_blank">www.complementaire-sante-solidaire.gouv.fr</a></p>
+          </legend><div class="row" data-toggle="buttons">
+
+
+
+          <div class="btn-group" role="group">
+
+
+
+
+            <input type="radio" id="organismeComplementaireChoixCPAM" name="organismeComplementaireChoix" value="CPAM">
+            <label class="btn" for="organismeComplementaireChoixCPAM">Caisse d'assurance maladie</label>
+
+            <input type="radio" id="organismeComplementaireChoixAUTRE" name="organismeComplementaireChoix" value="AUTREORGA">
+            <label class="btn" for="organismeComplementaireChoixAUTRE">Autre organisme figurant dans la liste</label>
+          </div>
+
+
+          </div>
+
+          <div id="organismeAdresse" class="row" style="display: none">
+            <div class="form-group mx-auto" style="max-width: 50%;">
+              <label for="nomOrganisme" class="label-form-cnaf">Nom de l’organisme</label>
+              <input type="text" class="form-control" id="nomOrganisme">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="paysOrg" class="label-form-cnaf">Pays</label>
+              <input type="text" class="form-control" id="paysOrg">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="codePostalOrg" class="label-form-cnaf">Code postal et commune</label>
+              <input type="text" class="form-control" id="codePostalOrg">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="adresseOrg" class="label-form-cnaf">N° et voie / Lieu-dit</label>
+              <input type="text" class="form-control" id="adresseOrg" placeholder="Exemple : 15 rue des Alouettes">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="complementOrg" class="label-form-cnaf">Complément d'adresse (facultatif)</label>
+              <input type="text" class="form-control" id="complementOrg" placeholder="Exemple : Bâtiment C, Appartement 330">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <h3 class="titre-bloc-cnaf">Logement</h3>
+    <div class="form-section">
+      <fieldset>
+
+        <legend class="label-form-cnaf fieldsetCnaf">Anna Wender a-t-elle la même adresse postale que le foyer ?</legend>
+
+
+
+            <div class="btn-group" role="group">
+
+
+
+
+              <input type="radio" id="adresseEgaleOui" name="adresseEgale" value="oui">
+              <label class="btn" for="adresseEgaleOui">Oui</label>
+
+              <input type="radio" id="adresseEgaleNon" name="adresseEgale" value="non">
+              <label class="btn" for="adresseEgaleNon">Non</label>
+            </div>
+
+
+        <div id="adresseSection" class="row mt-3">
+          <div class="col-md-6 form-group">
+            <label for="pays" class="label-form-cnaf">Pays</label>
+            <input type="text" class="form-control" id="pays">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="codePostal" class="label-form-cnaf">Code postal et commune</label>
+            <input type="text" class="form-control" id="codePostal">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="adresse" class="label-form-cnaf">N° et voie / Lieu-dit</label>
+            <input type="text" class="form-control" id="adresse" placeholder="Exemple : 15 rue des Alouettes">
+          </div>
+          <div class="col-md-6 form-group">
+            <label for="complement" class="label-form-cnaf">Complément d'adresse (facultatif)</label>
+            <input type="text" class="form-control" id="complement" placeholder="Exemple : Bâtiment C, Appartement 330">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
+    <div class="row row-btn-cnaf">
+      <div class="col-sm-12 form-group">
+
+        <button type="button" id="BCPrecedent" name="BCPrecedent" value="Précédent" title="Précédent" class="btn btn-form-cnaf btn-secondaire-cnaf">
+          Précédent
+        </button>
+        <!----><!---->
+        <!---->
+
+        <button type="submit" id="BCContinuer" name="BCContinuer" value="Continuer" title="Continuer" data-toggle="modal" class="btn btn-default btn-form-cnaf btn-majeur-cnaf" style="float: right;">
+          Continuer
+        </button>
+        <!----><!---->
+        <!---->
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+      $('#radioOui').on('click', function () {
+          $('#divRegimeAssMaladie').hide();
+      });
+      $('#radioNon').on('click', function () {
+          $('#divRegimeAssMaladie').show();
+      });
+
+      $('input[name="organismeComplementaireEgal"]').on('change', function () {
+          if ($(this).val() === 'non') {
+              $('#organismeSection').slideDown();
+          } else {
+              $('#organismeSection').slideUp();
+          }
+      });
+
+      $('input[name="organismeComplementaireChoix"]').on('change', function () {
+          if ($(this).val() === 'AUTREORGA') {
+              $('#organismeAdresse').slideDown();
+          } else {
+              $('#organismeAdresse').slideUp();
+          }
+      });
+
+      $('input[name="adresseEgale"]').on('change', function () {
+          if ($(this).val() === 'non') {
+              $('#adresseSection').slideDown();
+          } else {
+              $('#adresseSection').slideUp();
+          }
+      });
+  });
+</script>
+</body>
+</html>
